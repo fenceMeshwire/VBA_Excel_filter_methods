@@ -12,6 +12,7 @@ strCategory = "Category"  ' Replace strCategory name if needed.
 lngColumnMax = wksSheet.UsedRange.Columns.Count
 
 For lngColumn = 1 To lngColumnMax     ' Find the column number of strCategory
+  ' The AutoFilter is set on the first row in this example:
   If wksSheet.Cells(1, lngColumn).Value = strCategory Then lngColumnCategory = lngColumn
 Next lngColumn
 
