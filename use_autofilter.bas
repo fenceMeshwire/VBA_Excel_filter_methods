@@ -11,16 +11,13 @@ End Sub
 ' Check if AutoFilter is activated
 Sub check_AutoFilter()
 
-Dim lngColumnMax As Long
 Dim wksSheet As Worksheet
 
 Set wksSheet = Sheet1   ' Set the worksheet to be filtered
 
-lngColumnMax = wksSheet.UsedRange.Columns.Count
-
 With wksSheet
   If .AutoFilterMode Then Exit Sub
-  .Range("1:1").AutoFilter    ' Set the range to be filtered. 1:1 is the first row of the worksheet
+    .Range("1:1").AutoFilter    ' Set the range to be filtered. 1:1 is the first row of the worksheet
 End With
 
 End Sub
