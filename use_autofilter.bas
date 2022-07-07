@@ -3,10 +3,11 @@ Option Explicit
 Sub filter_Category_1()
 
 Call check_AutoFilter
-Call filter_Category(1)
+Call filter_Category(1)   ' The value to be filtered is the number:int 1 in this example.
 
 End Sub
 
+' =============================================
 ' Check if AutoFilter is activated
 Sub check_AutoFilter()
 
@@ -23,7 +24,8 @@ With wksSheet
 End With
 
 End Sub
-      
+
+' =============================================
 ' Category filtering procedure
 Sub filter_Category(intCategory As Integer)
 
