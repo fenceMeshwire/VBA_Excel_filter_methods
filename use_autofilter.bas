@@ -44,6 +44,7 @@ For lngColumn = 1 To lngColumnMax
   If wksSheet.Cells(1, lngColumn).Value = strCategory Then lngColumnCategory = lngColumn
 Next lngColumn
 
+' The AutoFilter is set on the first row in this example:
 With wksSheet.Range("1:1")
   .AutoFilter Field:=lngColumnCategory, Criteria1:=intCategory
 End With
