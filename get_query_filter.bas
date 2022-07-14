@@ -2,8 +2,7 @@ Option Explicit
 
 Sub query_filter()
 
-Dim lngFilter As Long
-Dim lngCounterValue As Long
+Dim lngCounterValue, lngFilter As Long
 Dim strPartnumber As String
 Dim varRange, varValue As Variant
 Dim wksSheet As Worksheet
@@ -113,8 +112,7 @@ End Function
 ' ================================================================
 Sub check_list(ByVal strPartnumber As String, ByRef varRange As Variant)
 
-Dim lngCounterRange As Long
-Dim lngRowValue As Long
+Dim lngCounterRange, lngRowValue As Long
 
 For lngCounterRange = LBound(varRange) To UBound(varRange)
   lngRowValue = varRange(lngCounterRange)
