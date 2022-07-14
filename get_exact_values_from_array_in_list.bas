@@ -2,7 +2,6 @@ Option Explicit
 
 Sub get_exact_values_from_array_in_list()
 
-Dim intCounter As Integer
 Dim lngRow, lngRowMax As Long
 Dim strTypeCode As String
 Dim varDat As Variant
