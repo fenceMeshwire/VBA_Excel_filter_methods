@@ -2,7 +2,7 @@ Option Explicit
 
 Sub query_filter()
 
-Dim lngCounterValue, lngFilter As Long
+Dim lngCounterValue As Long
 Dim strPartnumber As String
 Dim varRange, varValue As Variant
 Dim wksSheet As Worksheet
@@ -18,14 +18,11 @@ For lngCounterValue = LBound(varValue) To UBound(varValue)
     
     ' Apply the filter
     Call apply_filter(strPartnumber, wksSheet)
-    
-    ' Results of the filter
-    lngFilter = wksSheet.AutoFilter.Range.Offset(1).SpecialCells(xlCellTypeVisible).Cells(1, 2).Row
-    
+        
     ' Get range of unique part numbers
     varRange = get_visible_rows(wksSheet)
 
-    ' Go through the list of identical numbers
+    ' Go through the list of numbers to be checked
     Call check_list(strPartnumber, varRange)
 
 Next lngCounterValue
