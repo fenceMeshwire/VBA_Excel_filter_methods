@@ -87,11 +87,9 @@ End Sub
 ' ================================================================
 Function get_visible_rows(ByRef wksSheet As Worksheet) As Variant
 
-Dim lngRow, lngRowMax As Long
-Dim lngIndex As Long
+Dim lngIndex, lngRow, lngRowMax As Long
 Dim varRange As Variant
 
-lngIndex = 0
 lngRowMax = wksSheet.UsedRange.Rows.Count
 
 ReDim varRange(lngIndex)
