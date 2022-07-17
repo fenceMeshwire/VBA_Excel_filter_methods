@@ -9,6 +9,8 @@ Dim wksSheet As Worksheet
 
 Set wksSheet = Sheet1
 
+If Sheet1.Cells(1, 1).Value = "" Then Sheet1.Cells(1, 1).Value = "Data"
+
 ' Create an array of unique part numbers:
 varValue = create_array(wksSheet)
         
